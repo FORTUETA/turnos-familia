@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="110" fill="#ffffff"/>
-  <rect x="72" y="92" width="368" height="348" rx="40" fill="#eef2f7" stroke="#20242a" stroke-width="18"/>
-  <path d="M72 172h368" stroke="#20242a" stroke-width="18"/>
-  <path d="M164 72v78M348 72v78" stroke="#20242a" stroke-width="22" stroke-linecap="round"/>
-  <rect x="112" y="214" width="80" height="64" rx="12" fill="#cfe3ff"/>
-  <rect x="216" y="214" width="80" height="64" rx="12" fill="#d7f2d0"/>
-  <rect x="320" y="214" width="80" height="64" rx="12" fill="#fff0b8"/>
-  <rect x="112" y="302" width="80" height="64" rx="12" fill="#ffd4d4"/>
-  <rect x="216" y="302" width="80" height="64" rx="12" fill="#cfe3ff"/>
-  <rect x="320" y="302" width="80" height="64" rx="12" fill="#d7f2d0"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="110" fill="#fff"/><rect x="72" y="92" width="368" height="348" rx="40" fill="#eef2f7" stroke="#20242a" stroke-width="18"/><path d="M72 172h368" stroke="#20242a" stroke-width="18"/><path d="M164 72v78M348 72v78" stroke="#20242a" stroke-width="22" stroke-linecap="round"/><rect x="112" y="214" width="80" height="64" rx="12" fill="#cfe3ff"/><rect x="216" y="214" width="80" height="64" rx="12" fill="#d7f2d0"/><rect x="320" y="214" width="80" height="64" rx="12" fill="#fff0b8"/></svg>
