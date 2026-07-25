@@ -6,6 +6,7 @@ import {
 import {db} from './firebase'
 
 const DAYS=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom']
+const DAY_INITIALS=['L','M','X','J','V','S','D']
 const PEOPLE=[
 {id:'alfredo',name:'Alfredo',color:'#cfe3ff'},
 {id:'uin',name:'Uin',color:'#ead7ff'},
@@ -106,11 +107,11 @@ export default function App(){
 
    {status&&<div className={`status ${statusType}`}>{status}</div>}
 
-   <section className="summary">{counts.map(p=><div className="person-chip" key={p.id} style={{background:p.color}}><span>{p.name}</span><strong>{p.hours} h</strong></div>)}</section>
+   <section className="summary">{counts.map(p=><div className="person-chip" key={p.id} style={{background:p.color}}><span className="person-full">{p.name}</span><span className="person-initial">{p.name.charAt(0)}</span><strong>{p.hours} h</strong></div>)}</section>
 
    <section className="calendar-wrap"><div className="calendar-grid">
    <div className="corner">Hora</div>
-   {DAYS.map((day,i)=><div className="day-head" key={day}><strong>{day}</strong><span>{addDays(weekStart,i).getDate()}</span></div>)}
+   {DAYS.map((day,i)=><div className="day-head" key={day}><strong className="day-full">{day}</strong><strong className="day-initial">{DAY_INITIALS[i]}</strong><span>{addDays(weekStart,i).getDate()}</span></div>)}
    {Array.from({length:24},(_,hour)=><React.Fragment key={hour}>
      <div className="hour-label">{String(hour).padStart(2,'0')}:00</div>
      {DAYS.map((_,day)=>{

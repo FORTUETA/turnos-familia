@@ -1,1 +1,161 @@
 :root{font-family:Inter,system-ui,sans-serif;color:#222;background:#f5f6f8}*{box-sizing:border-box}body{margin:0}button{font:inherit}main{max-width:1200px;margin:auto;padding:18px}header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}h1{margin:0;font-size:1.6rem}header p{margin:3px 0;color:#666}.week-nav{display:flex;align-items:center;gap:10px}.week-nav button{border:1px solid #d7d9df;background:#fff;border-radius:10px;width:42px;height:42px;font-size:1.5rem}.status{padding:11px 13px;border-radius:10px;margin-bottom:12px;font-weight:700}.status.ok{background:#e7f6e4;color:#225a20}.status.info{background:#eef3ff}.status.error{background:#ffe3e3;color:#8a2222}.summary{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px}.person-chip{min-width:125px;padding:10px 12px;border-radius:12px;display:flex;justify-content:space-between;gap:12px}.calendar-wrap{overflow:auto;border:1px solid #d9dce3;border-radius:14px;background:#fff;max-height:calc(100vh - 200px)}.calendar-grid{display:grid;grid-template-columns:64px repeat(7,minmax(92px,1fr));min-width:760px}.corner,.day-head,.hour-label{background:#f2f3f6;border-right:1px solid #ddd;border-bottom:1px solid #ddd}.corner,.day-head{position:sticky;top:0;z-index:3}.corner{left:0;z-index:4;padding:14px 6px;text-align:center}.day-head{padding:10px 6px;text-align:center;display:flex;flex-direction:column}.day-head span{color:#777;font-size:.85rem}.hour-label{position:sticky;left:0;z-index:2;min-height:48px;padding:14px 5px;text-align:center;font-size:.8rem}.slot{min-height:48px;border:0;border-right:1px solid #e1e3e8;border-bottom:1px solid #e1e3e8;cursor:pointer;padding:4px;font-size:.78rem}.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.38);display:grid;place-items:end center;padding:12px;z-index:20}.modal{width:min(480px,100%);background:#fff;border-radius:18px;padding:18px;display:grid;gap:10px}.modal h2{margin:0 0 4px}.choice,.cancel{border:0;border-radius:12px;padding:14px;font-weight:700}.empty{background:#eceef2}.cancel{background:transparent;color:#555}@media(max-width:720px){main{padding:10px}header{align-items:flex-start;flex-direction:column}.week-nav{width:100%;justify-content:space-between}.week-nav strong{font-size:.9rem;text-align:center}.calendar-wrap{max-height:calc(100vh - 250px)}}
+
+.person-initial,
+.day-initial {
+  display: none;
+}
+
+/* Vista móvil compacta */
+@media (max-width: 720px) {
+  :root {
+    background: #f5f6f8;
+  }
+
+  main {
+    padding: 8px;
+  }
+
+  header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+    line-height: 1.1;
+  }
+
+  header p {
+    font-size: .82rem;
+    margin-top: 2px;
+  }
+
+  .week-nav {
+    gap: 5px;
+  }
+
+  .week-nav button {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    font-size: 1.15rem;
+    padding: 0;
+  }
+
+  .week-nav strong {
+    font-size: .82rem;
+    white-space: nowrap;
+  }
+
+  .status {
+    margin-bottom: 6px;
+    padding: 7px 9px;
+    font-size: .78rem;
+  }
+
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 5px;
+    overflow: visible;
+    padding-bottom: 7px;
+  }
+
+  .person-chip {
+    min-width: 0;
+    height: 38px;
+    padding: 4px 5px;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .person-full {
+    display: none;
+  }
+
+  .person-initial {
+    display: block;
+    font-size: .9rem;
+    font-weight: 750;
+  }
+
+  .person-chip strong {
+    font-size: .68rem;
+  }
+
+  .calendar-wrap {
+    max-height: calc(100vh - 160px);
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  .calendar-grid {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 42px repeat(7, minmax(39px, 1fr));
+  }
+
+  .corner {
+    padding: 7px 2px;
+    font-size: .68rem;
+  }
+
+  .day-head {
+    padding: 4px 1px 3px;
+    min-width: 0;
+    gap: 0;
+  }
+
+  .day-full {
+    display: none;
+  }
+
+  .day-initial {
+    display: block;
+    font-size: .82rem;
+    line-height: 1;
+  }
+
+  .day-head span {
+    font-size: .62rem;
+    margin-top: 2px;
+  }
+
+  .hour-label {
+    min-height: 36px;
+    padding: 11px 1px;
+    font-size: .63rem;
+  }
+
+  .slot {
+    min-height: 36px;
+    padding: 1px;
+    font-size: .52rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .modal-backdrop {
+    padding: 7px;
+  }
+
+  .modal {
+    padding: 12px;
+    gap: 7px;
+    border-radius: 14px;
+  }
+
+  .modal h2 {
+    font-size: 1rem;
+  }
+
+  .choice,
+  .cancel {
+    padding: 11px;
+  }
+}
