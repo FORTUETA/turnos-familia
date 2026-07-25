@@ -1,12 +1,12 @@
-# Turnos Familia PWA v3
+# Turnos Familia PWA v4 móvil
 
-Correcciones:
-- Nunca deja bloqueado el selector en gris.
-- Confirma el guardado leyendo el documento directamente desde el servidor.
-- Tiempo máximo de espera: 10 segundos.
-- Muestra el error real de Firebase en la parte superior.
-- Semanas independientes.
-- Usuarios: Alfredo, Uin, Fermín, Iván y Miriam.
+Mejoras para móvil:
+- Los siete días caben en pantalla.
+- Cabeceras L, M, X, J, V, S y D.
+- Resumen compacto A, U, F, I y M.
+- Filas de horas más bajas.
+- Título, navegación y márgenes más compactos.
+- En ordenador se mantienen los nombres completos.
 
-Sustituye los archivos en GitHub y confirma los cambios en `main`.
+Sustituye los archivos del repositorio por estos y confirma los cambios en `main`.
 Vercel desplegará automáticamente.
