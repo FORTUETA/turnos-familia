@@ -1,13 +1,12 @@
-# Turnos Familia PWA v2
+# Turnos Familia PWA v3
 
-Cambios:
-- Las semanas son independientes y no se copian automáticamente.
-- La lista se cierra inmediatamente al elegir una persona.
+Correcciones:
+- Nunca deja bloqueado el selector en gris.
+- Confirma el guardado leyendo el documento directamente desde el servidor.
+- Tiempo máximo de espera: 10 segundos.
+- Muestra el error real de Firebase en la parte superior.
+- Semanas independientes.
 - Usuarios: Alfredo, Uin, Fermín, Iván y Miriam.
-- La app espera confirmación del servidor y muestra errores de Firebase.
 
-## Actualización
-Sustituye en GitHub los archivos anteriores por estos y confirma los cambios en `main`. Vercel desplegará automáticamente.
-
-## Reglas
-Copia `firestore.rules` en Firebase → Firestore Database → Reglas y pulsa Publicar.
+Sustituye los archivos en GitHub y confirma los cambios en `main`.
+Vercel desplegará automáticamente.
